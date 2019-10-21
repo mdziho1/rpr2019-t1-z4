@@ -6,6 +6,9 @@ public class Artikl {
     private String kod;
 
     public Artikl(String naziv, int cijena, String kod) {
+        if (cijena < 0) {
+            throw new IllegalArgumentException();
+        }
         this.naziv = naziv;
         this.cijena = cijena;
         this.kod = kod;
